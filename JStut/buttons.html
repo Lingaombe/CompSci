@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Listeners
+        </title>
+        <style>
+            #events{
+                background: lightblue;
+                max-width: 150px;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                text-align: center;
+            }
+            #events:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="events">
+            Hey! Click Me!
+            >.<..
+        </div>
+    </body>
+    <script>
+        const mybox = document.getElementById("events");
+
+        mybox.addEventListener("mouseover", event=> {
+            event.target.textContent = "Bruh";
+            event.target.style.background = "yellow";
+        });
+        mybox.addEventListener("mouseout", event=> {
+            event.target.textContent = "Coward ass -_-!";
+            event.target.style.background = "pink";
+
+        });
+        mybox.addEventListener("click", event=> {
+            event.target.textContent = "Nigga OxO";
+            event.target.style.background = "red";
+
+        });
+    </script>
+</html>

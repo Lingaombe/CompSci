@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="dat"></p>
+        <p id="tim"></p>
+        <button onclick="Print()">Print Page</button>
+    </body>
+    <script>
+        const dat = document.getElementById("dat");
+        const tim = document.getElementById("tim");
+
+        let word = "Hannah";
+
+        for(each of word){
+            console.log(each);
+        }
+        
+        dat.textContent = `Today is ${Date()}`;
+
+        tim.textContent = `Current time is `;
+
+        function Print(){
+            window.print()
+        }
+
+    </script>
+</html>

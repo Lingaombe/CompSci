@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <marquee>
+            <p>hello guys</p>
+            <h1>marquee check</h1>
+            <p>hey</p>
+        </marquee>
+
+        <label>1st Number</label>
+        <input type="number" id="f">
+        <br>
+        <label>2nd Number</label>
+        <input type="number" id="s">
+        <br>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <br>
+        <p id="ans"></p>
+
+    </body>
+    <script>
+        const num1 = document.getElementById("f").value;
+        const num2 = document.getElementById("s").value;
+        const ans = document.getElementById("ans");
+
+        let x = Number(num1);
+        let y = Number(num2);
+
+        function multiply(){
+            ans.textContent = `Product is ${x*y}`;
+        }
+
+        function divide(){
+            ans.textContent = `Quotient is ${x/y}`;
+        }
+        
+    </script>
+</html>

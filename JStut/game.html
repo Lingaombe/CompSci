@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hey
+        </title>
+        <style>
+            body{
+                min-width: 400px;
+                min-height: 1000px;
+            }
+            #mov{
+                font-size: 8em;
+                background: pink;
+                max-width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mov" style="border: solid 5px">
+            💃🏾
+        </div>
+    </body>
+    <script>
+        const mov = document.getElementById("mov");
+        const move = `10px`;
+        let x;
+        let y;
+
+        document.addEventListener("keypress", event => {
+
+            if(event.key.startsWith("Arrow")){
+
+                event.preventDefault();
+
+                switch(event.key){
+                    case "ArrowUp":
+                        y -= move;
+                        break;
+                    case "ArrowDown":
+                        y += move;
+                        break;
+                    case "ArrowLeft":
+                        x -= move;
+                        break;
+                    case "ArrowRight":
+                        x += move;
+                        break;
+                }
+            mov.style.top = `${y}px`;  
+            mov.style.left = `${x}px`;  
+            }
+        });
+    </script>
+</html>

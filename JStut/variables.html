@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tut</title>
+    </head>
+    <body>
+        <h3>Cart Quantity</h3>
+        <p id="p"></p>
+        <button onclick="
+        console.log(`Cart Quantity: ${quantity}`);
+        ">show quantity</button> 
+
+        <button onclick="
+        quantity++;
+        console.log(`Cart Quantity: ${quantity}`);
+        ">add to cart</button>
+
+        <button onclick = "
+        quantity  = quantity + 2
+        console.log(`Cart Quantity: ${quantity}`);
+        ">+2</button>
+
+        <button onclick="
+        quantity  = quantity + 3
+        console.log(`Cart Quantity: ${quantity}`);
+        ">+3</button>
+
+        <button onclick = "
+        quantity = 0;
+        console.log(`Cart was reset`);
+        console.log(`Cart Quantity: ${quantity}`);
+        ">reset cart</button>
+ 
+    </body>
+</html>

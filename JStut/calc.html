@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            button{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                border: none;
+                color: black;
+                background-color: aliceblue;
+                cursor: pointer;
+                font-size: 3rem;
+            }
+            .keys{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 10px;
+                padding: 25px;
+            }
+            .calc{
+                font-family: 'Bodoni MT';
+                background-color: pink;
+                border-radius: 15px;
+                max-width: 500px;
+                overflow: hidden;
+            }
+            #display{
+                width: 100%;
+                padding: 20px;
+                font-size: 5rem;
+                text-align: left;
+                border: none;
+                background-color: hotpink;
+            }
+            button:hover{
+                background-color: rgb(222, 115, 169)
+            }
+            button:active{
+                background-color: rgb(254, 122, 188);
+            }
+            .operator{
+                background-color: plum;
+            }
+            .operator:hover{
+                background-color: rgb(255, 171, 255);
+            }
+            .operator:active{
+                background-color: rgb(240, 194, 240);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calc">
+            <input id="display" readonly>
+            <div class="keys">
+                <button class="operator" onclick="append('+')">+</button>
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button class="operator" onclick="append('-')">-</button>
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button class="operator" onclick="append('*')">*</button>
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button class="operator" onclick="append('/')">/</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="append('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button class="operator" onclick="clearo()">C</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        const display = document.getElementById('display');
+
+        function append(input){
+            display.value += input;
+        }
+        
+        function clearo(){
+            display.value = '';
+        }
+
+        function calculate(){
+            try{
+                display.value = eval(display.value);
+            }
+            catch(error){
+                display.value = "Error";
+            }
+        }
+
+    </script>
+</html>
+variables
+- declaration: let, const and var
+- hoisting: js behaviour of moving declaration to top of code
+- shadowing: when  local variable shares name of global variable
+- type coercion: automatically changing type
+
+data types
+- num, string, null, obj, arra, boolean, undefined
+type convertion fns
+- Number and String
+- Boolean and Parseint and Parsefloat
+control structures
+- if else switch tenary condition ? true : false
+loops
+- for do while
+
+functions
+- types: fn dec, fn exp and arrow
+- scope: local, block(inside curly braces) and global | closures: remember context created in
+- higher order: takes one or more fn as arguments or returns fn | callbacks: fn passed as argument. executes after fn passed to
+objects
+- new keyword const h = new object() h.name=jdak
+- object literals const h{name = hahha}
+- key value pairs
+
+arrays
+- push(add to end) pop(remove last) 
+- shift(remove first) unshift(prepend) 
+- map(new array based on function) filter(new that pass condition) splice(change contects of array)
+- split(separate based on separator) join(cobine array elemts to string with specified differenciator)
+eventhandling
+- addeventlistener
+error handling
+- try(contains code) and catch(handle error) finally(runs even if error occurs or not)
+promise
+- handle asyncronised deal with callbacks
+- resolve - reject - then catch -
+
+JSON.parse = javascript
+
+DOM
+- add: body.append(string) appendchild(node ie elements), el.innertext, el.textcontent
+- create: document.createelement(el type) then add
+- modify: innerHtml to render from js
+- remove: el.remove() el.removechild(elm)
+- show attributes: getattribute(id) el.id
+- change attribute or add: el.setattribute(id, name) el.id = name
+- remove: removeattribute(id)
+- data-test/longer user def = stuff: el.dataset
+- classes of el: el.classlist.add(newclass) el.classlist.remove() el.classlist.toggle()
+- modify style: doc.body.style.color = blue

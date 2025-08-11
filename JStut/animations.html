@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Animations
+        </title>
+        <style>
+            .slide{
+                animation-name: slide;
+                animation-direction: normal;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1ms;
+            }
+            @keyframes slide{
+                from{
+                    background: pink;
+                }
+                to{
+                    background: yellow;
+                    transform: translateX(50px);
+                    color: white;
+                }
+            }
+            .rotate{
+                animation: rotate 5s ease-in-out 1ms infinite;
+            }
+            @keyframes rotate{
+                from{
+                    background: plum;
+                    text-align: center;
+                }
+                to{
+                    background: rgb(239, 212, 239);
+                    transform: rotate(360deg);
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="rotate">
+            Hello World!
+        </h1><br>
+        <h2 class="rotate">
+            Hello World!
+        </h2><br>
+        <h3 class="rotate">
+            Hello World!
+        </h3>
+    </body>
+</html>
