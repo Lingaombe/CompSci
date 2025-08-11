@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mathematics</title>
+	<head>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+		}
+		table{
+			border: 1px solid black;
+			margin: auto;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+	</style>
+	<body>
+		<table>
+				<caption>
+					The Numbers {{x}}, {{y}} and {{z}}
+				</caption>
+				<tbody>
+					<tr>
+						<th>Sum of em </th>
+						{% set sum=x+y+z %}
+						<td>{{sum}}</td>
+					</tr>
+					<tr>
+						<th>Average of em</th>
+						{% set average=sum/3 %}
+						<td>{{average}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</html>

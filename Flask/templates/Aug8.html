@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dividing Money</title>
+	<head>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+		}
+		table{
+			border: 1px solid black;
+			margin: auto;
+			text-align: center;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+	</style>
+	<body>
+		<table>
+				<caption>
+					Given amount: {{x}}
+				</caption>
+				<thead>
+					<th>Denominations</th>
+					<th>No. of Notes</th>
+					<th>Rupees</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>500</td>
+						{% set h=x//500 %}
+						{% set x=x%500 %}
+						<td>{{h}}</td>
+						<td>{{h*500}}</td>
+					</tr>
+					<tr>
+						<td>200</td>
+						{% set h=x//200 %}
+						{% set x=x%200 %}
+						<td>{{h}}</td>
+						<td>{{h*200}}</td>
+					</tr>
+					<tr>
+						<td>100</td>
+						{% set h=x//100 %}
+						{% set x=x%100 %}
+						<td>{{h}}</td>
+						<td>{{h*100}}</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						{% set h=x//50 %}
+						{% set x=x%50 %}
+						<td>{{h}}</td>
+						<td>{{h*50}}</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						{% set h=x//20 %}
+						{% set x=x%20 %}
+						<td>{{h}}</td>
+						<td>{{h*20}}</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						{% set h=x//10 %}
+						{% set x=x%10 %}
+						<td>{{h}}</td>
+						<td>{{h*10}}</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						{% set h=x//5 %}
+						{% set x=x%5 %}
+						<td>{{h}}</td>
+						<td>{{h*5}}</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						{% set h=x//2 %}
+						{% set x=x%2 %}
+						<td>{{h}}</td>
+						<td>{{h*2}}</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						{% set h=x//1 %}
+						{% set x=x%1 %}
+						<td>{{h}}</td>
+						<td>{{h*1}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</html>

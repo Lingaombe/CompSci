@@ -1,0 +1,74 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Vivekanand College</title>
+		<style>
+			body{
+				color: black;
+				background: white;
+			}
+			.dark_mode{
+				background: black;
+				color: white;
+			}
+			nav{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			nav ul{
+				display: flex;
+				gap: 20px;
+			}
+			nav ul li{
+				text-decoration: none;
+				list-style-type: none;
+				color: orange;
+			}
+			button{
+				padding: 5px;
+				border-radius: 10px;
+				color: orange;
+				border: transparent;
+			}
+			footer{
+				position: fixed;
+				bottom: 0;
+				left: 0;
+			}
+	</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<a href="{{url_for('home')}}"><li>Home<li></a>
+				<a href="{{url_for('management')}}"><li>Management<li></a>
+				<a href="{{url_for('courses')}}"><li>Courses<li></a>
+				<a href="{{url_for('contact')}}"><li>Contact<li></a>
+			<ul>
+			<button onclick="toggle()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<path fill="currentColor" d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0" />
+	<path fill="currentColor" fill-rule="evenodd" d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75" clip-rule="evenodd" />
+	<path fill="currentColor" d="M4.398 4.398a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.392.393a.75.75 0 0 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0m-1.453 13.748a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m-12.295 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0" opacity="0.5" />
+</svg></button>
+		</nav>	
+		<main>
+			<h1>Vivekanand College Management</h1>
+			<p>The Management Committee of the Shri Swami Vivekanand Shikshan Sanstha, Kolhapur consists of twenty members. The committee is elected in the General Body Meeting of the Sanstha after receiving recommendations from the Life Members / Workers Committee. The present Management Committee is</p> 
+				<p>President: Hon’ble Chandrakantdada Bachhu Patil, Minister of Higher and Technical Education of Maharashtra</p>
+				<p>Vice Presidents: Hon’ble Namdevrao Kamble and Hon’ble Lalasaheb Yadav</p>
+				<p>Members: Hon’ble Sambhaji Shahu Chatrapati <br>
+Hon’ble Avinash Dinkar Patil <br>
+Hon’ble Prin.Dr. Jaysingh Shriram Deshmukh<br>
+Hon'ble Prin.Dr. Ramesh Rajaram Kumbhar</p>
+		</main>
+		<footer>
+			Vivekanand College, Kolhapur
+		</footer>	
+	</body>
+	<script>
+		function toggle(){
+			document.body.classList.toggle("dark_mode");
+		}
+	</script>
+</html>

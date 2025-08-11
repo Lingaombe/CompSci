@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Circle stuff</title>
+	<head>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+		}
+		table{
+			border: 1px solid black;
+			margin: auto;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+	</style>
+	<body>
+		<table>
+				<caption>
+					Given seconds: {{x}}
+				</caption>
+				<tbody>
+					<tr>
+						<th>Hours</th>
+						{% set h=x//3600 %}
+						{% set x=x%3600 %}
+						<td>{{h}}</td>
+					</tr>
+					<tr>
+						<th>Minutes</th>
+						{% set m=x//60 %}
+						{% set x=x%60 %}
+						<td>{{m}}</td>
+					</tr>
+					<tr>
+						<th>Seconds</th>
+						<td>{{x}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</html>

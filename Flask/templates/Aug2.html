@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Information</title>
+	<head>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+		}
+		table{
+			border: 1px solid black;
+			margin: auto;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+		td{
+			width: 500px;
+		}
+	</style>
+	<body>
+		<table>
+				<caption>
+					My Information
+				</caption>
+				<tbody>
+					<tr>
+						<th>The first name is</th>
+						<td>{{name}}</td>
+					</tr>
+					<tr>
+						<th>The vowels are</th>
+						<td>{{vowels}}</td>
+					</tr>
+					<tr>
+						<th>My details are</th>
+						<td>{{details}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</html>

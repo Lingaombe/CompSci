@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Circle stuff</title>
+	<head>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+		}
+		table{
+			border: 1px solid black;
+			margin: auto;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+	</style>
+	<body>
+		<table>
+				<caption>
+					Given radius: {{x}}
+				</caption>
+				<tbody>
+					<tr>
+						<th>Area of circle</th>
+						{% set a=x*x*3.14 %}
+						<td>{{a}}</td>
+					</tr>
+					<tr>
+						<th>Circumference of circle</th>
+						{% set c=x*2*3.14 %}
+						<td>{{c}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</html>
