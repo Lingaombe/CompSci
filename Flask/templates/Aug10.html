@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>International Shipping Calc</title>
+	</head>
+	
+	<body>
+		<!--
+			akakhala ndi premium kuchotsela 20%
+			ngati alibe komanso watumiza >20kg price=price+(price*0.15)
+		-->
+		{% if c=='India' %}
+			{% set price=w*50 %}
+		{% elif c=='USA' %}
+			{% set price=w*300 %}
+		{% elif c=='UK' %}
+			{% set price=w*250 %}
+		{% else %}
+			enter valid country
+			{% set price=0 %}{% set c='unknown' %}{% set w=0 %}
+		{% endif %}
+		
+		{% if w>20 and m!='premium' %}
+			{% set price = price+(0.15*price) %}
+		{% endif %}
+		
+		{% if m=='premium' %}
+		{% set price = price-(0.2*price) %}
+		{% endif %}
+		
+		<p>To ship weight of {{w}} to {{c}} as a {{m}} member, price is {{price}}</p>
+	</body>
+</html>

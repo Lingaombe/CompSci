@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Exam result with grace marks and attempt check</title></head>
+	<body>
+		<!--
+			if cat is sports 5marks++
+			if marks >=50 pass
+			if marks<50 but >40 and attempt is 1 then pass with grace
+			else fail
+		-->
+		{% if c=='sports' %}{% set m = m+5 %}{% endif %}
+		<p>Your marks are {{m}}</p>
+		{% if m>= 50 %}<p>Pass</p>
+		{% elif m<=49 and m>=40 and a==1 %}<p>Pass with Grace</p>
+		{% else %}<p>Fail</p>{% endif %}
+	</body>
+</html>

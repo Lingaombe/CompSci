@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Hotel Pricing</title></head>
+	<body>
+		<!--
+			deluxe=2000/day, suite=3500/day
+			season=peak then 20% price hike
+			weekend then 10% price hike
+			days>7 then 15% discount
+		-->
+		
+		{% if r=='suite' %}{% set p=nod*3500 %}
+		{% elif r=='deluxe' %}{% set p=nod*2000 %}
+		{% else %} Enter valid room: deluxe or suite {% set p=0 %}{% endif %}
+		
+		{% if s=='peak' %}{% set p = p+(0.2*p) %}{% endif %}
+		{% if tsiku=='Saturday' or tsiku=='Sunday' %}{% set p = p+(0.1*p)%}{% endif %}
+		{% if nod >=7 %}{% set p=p-(0.15*p) %}{% endif %}
+		
+		<p>
+			Visiting a {{r}} room for {{nod}} days
+			on {{tsiku}} during {{s}} season
+			will cost {{p}}MKW
+		</p>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Rental</title>
+	</head>
+	
+	<body>
+		<!--
+			galimoto iliyonse ili ndi mtengo wake
+			ngati yatengedwa masiku oposera khumi apatsidwe kuchepetsedwa
+		-->
+		{% if x=='hatchback' %}
+			{% set price=y*1000 %}
+		{% elif x=='sedan' %}
+			{% set price=y*1500 %}
+		{% elif x=='suv' %}
+			{% set price=y*2000 %}
+		{% else %}
+			enter valid car
+			{% set price=0 %}{% set x='unknown' %}{% set y=0 %}
+		{% endif %}
+		
+		{% if y>=10 %}
+			{% set price = price-(0.1*price) %}
+		{% endif %}
+		
+		<p>{{x}} rented for {{y}} days costs {{price}}</p>
+	</body>
+</html>
