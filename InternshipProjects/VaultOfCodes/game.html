@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Car Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background: green;
+                place-items: center;
+            }
+            #road{
+                width: 50vw;
+                top: -80vh;
+                z-index: -9;
+                position: relative;
+            }
+            button{
+                position: absolute;
+                top: 60vh;
+                left: 47vw;
+                z-index: 100;
+                font-size: 2rem;
+                background-color: plum;
+                color: white;
+                border: transparent;
+                padding: 5px;
+                border-radius: 10px;
+                font-style: italic;
+                cursor: pointer;
+            }
+            #score{
+                position: absolute;
+                top: 20px;
+                left: 1px;
+                z-index: 100;
+                font-size: 2rem;
+                background-color: plum;
+                color: white;
+                border: transparent;
+                padding: 5px;
+                border-radius: 10px;
+                font-style: italic;
+            }    
+            .car{
+                display: grid;
+                position: relative;
+                place-items: center;
+                width: 80px;
+                height: 120px;
+                z-index: 1001;
+            }
+            #car1{
+                left: 300px;
+                animation: car1 infinite linear 1s;
+            }
+            #car2{
+                left: 100px;
+                animation: car2 infinite linear 2s;
+            }
+            #car3{
+                left: -100px;
+                animation: car3 infinite linear 1.5s;
+            }
+            #car4{
+                left: -300px;
+                animation: car4 infinite linear 2.5s;
+            }
+            #carr{
+                top: 15vh;
+            }
+            @keyframes car1{
+                0%{
+                    top: -30vh;
+                }
+                100%{
+                    top: 100vh;
+                }
+            }
+            @keyframes car2{
+                0%{
+                    top: -50vh;
+                }
+                100%{
+                    top: 100vh;
+                }
+            }
+            @keyframes car3{
+                0%{
+                    top: -60vh;
+                }
+                100%{
+                    top: 100vh;
+                }
+            }
+            @keyframes car4{
+                0%{
+                    top: -80vh;
+                }
+                100%{
+                    top: 100vh;
+                }
+            }
+
+
+        </style>
+        <script src="game.js"></script>
+    </head>
+    <body>
+
+        <div id="score">Score: 0</div>
+        <button>Start Game</button>
+
+        <div>
+            <div id="enemy1"><img id="car1" class="car" src="assets/black.png" alt="car incoming"></div>
+            <div id="enemy2"><img id="car2" class="car" src="assets/white.png" alt="car incoming"></div>
+            <div id="enemy3"><img id="car3" class="car" src="assets/yellow.png" alt="car incoming"></div>
+            <div id="enemy4"><img id="car4" class="car" src="assets/red.png" alt="car incoming"></div>
+        </div>
+        <div id="mycar"><img id="carr" class="car" src="assets/redd.png" alt="my car"></div>
+
+        <img id="road" src="assets/road.jpg">
+
+    </body>
+</html>

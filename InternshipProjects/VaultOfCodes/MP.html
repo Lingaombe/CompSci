@@ -1,0 +1,169 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Resume Builder
+        </title>
+        <link rel="icon" type="image/x-icon" href="fav1.png">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+        *{
+            font-family: "Macondo";
+            font-weight: 400;
+            font-style: normal;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 40% 60%;
+            font-size: 1.2em;
+        }
+        .input{
+            margin: 1%;
+        }
+        #form input{
+            padding: 10px;
+            border-radius: 10px;
+            width: 70%;
+            margin: 5px;
+        }
+        button{
+            padding: 1% 2%;
+            border-radius: 10px;
+            font-style: oblique;
+            font-weight: 600;
+            border: transparent;
+        }
+        button:hover{
+            transition: background-color 1s ease, transform 1s ease;
+            background-color: grey;
+            transform: scale3d(1.1,1.1,1.1);
+        }
+        h1, h2{
+            text-align: center;
+        }
+        .skills ul{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .skills li{
+            flex: 1 0 21%;
+            list-style-type: none;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid grey;
+            margin: 1%;
+        }
+        .skills li:hover{
+            border: transparent;
+            transition: background-color 1s ease;
+            background-color: gray;
+            cursor: pointer;
+        }
+        li{
+            list-style-type: square;
+        }
+        .education{
+            right: 0;
+        }
+        .buttons{
+            display: flex;
+            gap: 30%;
+        }
+        .buttons button{
+            width: 30%;
+            padding: 5px;
+        }
+        .pic{
+            display: flex;
+            justify-content: space-around;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            display: none;
+            border-radius: 50%;
+        }
+        #output{
+            font-family: serif;
+            margin: 1%;
+        }
+        #education1{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (orientation: portrait){
+            body, #education1{
+            grid-template-columns: repeat(1, 1fr);
+            }
+            .input, #output{
+            align-items: center;
+            margin: auto;
+            width: 1000px;
+            }
+            input{
+            width: 700px;
+            }
+        }
+    </style>
+    <body>
+        <section class="input">
+            <h1>Build Your Resume</h1>
+            <div id="form">
+                <input oninput="name_data()" type="text" id="name" placeholder="Name"><br>
+                <input type="file" title="upload a picture" id="pic" accept="image/*" onchange="dispic(event)">
+                <input oninput="contact()" type="text" id="email" placeholder="Email"><br>
+                <input oninput="contact()" type="tel" id="phone" placeholder="Phone"><br>
+                <input oninput="summary_data()" type="text" id="summary" placeholder="profile summary"><br>
+                <input type="text" id="education" placeholder="Education" onfocus="this.value=''"><button onclick="addedu()" title="cant undo add">+</button><br>
+                <input type="text" id="skills" placeholder="Skills" onfocus="this.value=''"><button onclick="addskill()" title="cant undo add">+</button><br>
+                <input type="text" id="experience" placeholder="Experience" onfocus="this.value=''"><button onclick="addexpo()" title="cant undo add">+</button><br>
+            </div><br>
+            <div class="buttons">
+                <button onclick="Clear()">Clear</button>
+                <button onclick="Print()">Print</button>
+            </div><br>
+        </section>
+        <section id="output">
+            <div class="pic">
+                <h1 id="name2"></h1>
+                <img id="displayedImage">
+            </div>
+            
+            <div class="summary">
+                <h2 id="Summary"></h2>
+                <p id="summary1"></p>
+            </div>
+
+            <div class="education">
+                <h2 id="Education"></h2>
+                <ul id="education1">
+
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h2 id="Skills"></h2>
+                <ul id="skill1">
+
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h2 id="Experience"></h2>
+                <ul id="experience1">
+
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h2 id="Contact"></h2>
+                <p id="email1"></p>
+                <p id="phone1"></p>
+            </div>
+        </section>
+    </body>
+    <script src="MP.js"></script>
+</html>

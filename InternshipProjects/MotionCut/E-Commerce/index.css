@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'comfortaa';
+    font-weight: bold;
+}
+body{
+    max-width: 98vw;
+    font-size: 1.5em;
+}
+a{
+    color: rgb(11, 11, 255);
+    text-decoration: none;    
+}
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}

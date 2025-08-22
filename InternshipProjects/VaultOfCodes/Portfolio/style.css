@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+
+*{
+    background-color: black;
+    color: white
+}
+body{
+    font-family: 'Comfortaa';
+    padding: 0;
+    margin: 1;
+    font-size: 1.2em;
+}
+a{
+    color: plum;
+    text-decoration: none;
+}
+title{
+    border-radius: 10px;
+    background-color: plum;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+}
+#about{
+    width: 60vw;
+    margin: auto;
+    line-height: 2;
+}
+#about h2{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin-top: 4%;
+}
+.skills li{
+    list-style-type: none;
+    padding: 10px;
+    border: solid 1px plum;
+    border-radius: 10px;
+    margin-bottom: 1px;
+}
+.skills li:hover{
+    transition: transform 1s ease, background-color 1s ease;
+    transform: scale3d(1.1,1.1,1.1);
+    cursor: pointer;
+    background-color: rgb(232, 128, 232);
+    border: transparent;
+}
+.skills ul{
+    display: flex;
+    gap: 5px;
+}
+#image{
+    border-radius: 50%;
+    border: transparent;
+    height: 30vh;
+    width: 30vw
+}
+#skills{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.projects h3{
+    text-align: center;
+}
+.project{
+    filter: drop-shadow(8px 8px 10px rgb(193, 164, 193));
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    width: 70vw;
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+@media (orientation: landscape) {
+    .contact{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project{
+        width: 40vw;
+        height: 400px;
+    }
+}

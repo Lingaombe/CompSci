@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            PAMSIKA e-commerce 
+        </title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="products.css">
+        <link rel="stylesheet" href="page.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a id="mode">PAMSIKA</a>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="search here">
+                <img src="icons/search.png">
+            </div>
+            <div class="cart">
+                <a href="#"><img src="icons/cart.png" id="cart"></a>
+                <label for="cart" id="count">0</label>
+            </div>
+        </div>
+        <div class="navbar_adaptive">
+            <a id="mode">PAMSIKA</a>
+            <div class="search">
+                <input type="text" placeholder="search here">
+                <img src="icons/search.png">
+            </div>
+            <img src="icons/menu.png" id="open">
+        </div>
+        <div id="menu">
+            <div class="side">
+                <img src="icons/exit.png" id="close"><br>
+                <div id="nav_menu">
+                    <a href="index.html">Home</a><br>
+                    <a href="#">Shop</a><br>
+                    <a href="#">Contact</a><br>
+                    <a href="#"><img src="icons/cart.png" id="cart"></a>
+                    <label for="cart" id="coun">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="product">
+                <div class="image">
+                    <img src="products/froghoodies.jpg" alt="frog hoodies">
+                </div>
+                <div class="imagedesc">
+                    <h2>Frog Hoodie</h2>
+                    <p>sold by <a>limbe</a></p>
+                    <p>This hoodie is a polyester blend</p>
+                    <p>MKW 8000</p>
+                    <button onclick="add()" style="color:white;">add to cart</button>
+                </div>
+            </div>
+            <div class="customer">
+                <hr>
+                <h1>
+                    What Customers Are Saying
+                </h1>
+                <div class="review">
+                    <div class="summary">
+                        <img style="cursor: pointer;" src="icons/reviews.png" alt="review summary">
+                    </div>
+                    <div class="long">
+                        <div>
+                            <h3>Emma</h3>
+                            <p>I love frogs and this hoodie is the best thing everrrrr</p>
+                            <hr>
+                            <h3>Broseph</h3>
+                            <p>Five stars</p>
+                            <hr>
+                        </div>
+                        <div>
+                            <h3>Johnny Frontdesk guy</h3>
+                            <p>The fabric is smooth and warm</p>
+                            <hr>
+                            <a href="#">...more reviews</a>
+                        </div>
+                    </div>
+                </div>                                                                                                                              
+            </div>
+            <div class="related">
+                <hr>
+                <h1>
+                    Related Items
+                </h1>  
+                <ul id="scroll">
+                    <li>
+                        <img src="products/monsterhoodies.jpg" alt="monsterhoodies">
+                        <p>MKW 1000</p>
+                    </li>
+                    <li>
+                        <img src="products/forresthoodies.jpg" alt="forrest hoodies">
+                        <p>MKW 1500</p>
+                    </li>
+                    <li>
+                        <img src="products/bluehoodies.jpg" alt="blue hoodies">
+                        <p>MKW 2300</p>
+                    </li>
+                    <li>
+                        <img src="products/abstracthoodies.jpg" alt="abstract hoodies">
+                        <p>MKW 3900</p>
+                    </li>
+                    <li>
+                        <img src="products/blackhoodies.jpg" alt="black hoodie">
+                        <p>MKW 3000</p>
+                    </li>
+                    <li>
+                        <img src="products/paleboots.jpg" alt="pale boots">
+                        <p>MKW 3400</p>
+                    </li>
+                    <li>
+                        <img src="products/pinkbag.jpg" alt="pink bag">
+                        <p>MKW 4500</p>
+                    </li>
+                </ul>  
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
