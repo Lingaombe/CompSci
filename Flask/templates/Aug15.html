@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+</head>
+<body>
+    Normal ticket: 1000MKW <br>
+    {% if a <=11 %}
+    {% set p=1000*0.5 %}
+    {% elif a>=60 %}
+    {% set p=1000*0.7 %}
+    {% endif %}
+    {% if d=='wednesday' %}
+    {% set p=p*0.9 %}{% endif %}
+
+    Price after discounts {{p}}MKW
+</body>
+</html>

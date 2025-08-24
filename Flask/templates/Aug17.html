@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus</title>
+</head>
+<body>
+    {% if e >=5 and p=='excellent' %}
+    {% set b='20%'%}
+    {% elif p=='good' %}
+    {% set b='10%' %}
+    {% else %}
+    {% set b='0%' %}
+    {% endif %}
+
+    Bonus: {{b}}
+</body>
+</html>

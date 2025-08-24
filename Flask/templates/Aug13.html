@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+</head>
+<body>
+    {% if m<=34 %}
+    fail in {{s}}
+    {% elif m<=50 %}
+    pass in {{s}}
+    {% elif m<=75 %}
+    first class in {{s}}
+    {% else %}
+    Distinction in {{s}}
+    {% endif %}
+</body>
+</html>
