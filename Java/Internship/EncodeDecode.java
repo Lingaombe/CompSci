@@ -2,15 +2,23 @@ import java.util.Scanner;
 
 public class EncodeDecode {
     static Scanner read = new Scanner(System.in);
+    
     public static void main(String[] args){
         programEntry();
     }
+    
     public static void programEntry(){
         int choice = displayMessage();
+        if(choice==3) {
+            System.out.println("Exiting the program now.");
+            System.exit(0);
+        }
         System.out.println("Enter shift i.e 2 for A-C etc");
         int shift = read.nextInt();
+        read.nextLine();
         processChoice(choice, shift);
     }
+    
     public static int displayMessage(){
         System.out.println("Enter your numeric choice based on the menu");
         System.out.println("1. Encode");
@@ -18,9 +26,10 @@ public class EncodeDecode {
         System.out.println("3. Exit");
         return read.nextInt();
     }
+    
     public static void processChoice(int y, int z){
-        System.out.print("Enter the message to encode/decode: ");
-        String userMessage = read.next();
+        System.out.println("Enter the message to encode/decode: ");
+        String userMessage = read.nextLine();
         switch(y){
             case 1:
                 encode(userMessage, z);
@@ -28,13 +37,11 @@ public class EncodeDecode {
             case 2:
                 decode(userMessage, z);
                 break;
-            case 3:
-                displayMessage();
-                break;
             default:
                 System.out.print("Invalid selection");
         }
-    }
+    } 
+    
     public static void encode(String x, int z){
         StringBuilder sb = new StringBuilder(x);
         for(int i=0;i<sb.length();i++){
@@ -52,6 +59,7 @@ public class EncodeDecode {
         System.out.println();
         runAgain();
     }
+    
     public static void decode(String x, int z){
         StringBuilder sb = new StringBuilder(x);
         for(int i=0;i<sb.length();i++){
