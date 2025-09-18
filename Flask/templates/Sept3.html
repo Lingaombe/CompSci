@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>List</title>
+		<style>	
+		tr{
+			padding: 10px;
+		}
+		</style>
+	</head>
+	<body>	
+		<main>
+			{% set ns = namespace(so=0,co=0, se=0, ce=0) %}
+
+			{% for i in li %}
+				{% if i%2==0 %}
+					{% set ns.se=ns.se+i %}
+					{% set ns.ce=ns.ce+1 %}
+				{% else %}
+					{% set ns.so=ns.so+i %}
+					{% set ns.co=ns.co+1 %}
+				{% endif %}
+			{% endfor %}
+			<table>
+			<tr>
+			<td>Sum of even</td>
+			<td>{{ns.se}}</td>
+			</tr>
+			<tr>
+			<td>Count of even</td>
+			<td>{{ns.ce}}</td>
+			</tr>
+			
+			<tr>
+			<td>Sum of odd</td>
+			<td>{{ns.so}}</td>
+			</tr>
+			<tr>
+			<td>Count of odd</td>
+			<td>{{ns.co}}</td>
+			<tr>
+			</table>			
+		</main>
+		<footer>
+		</footer>	
+	</body>
+	<script>
+	</script>
+</html>

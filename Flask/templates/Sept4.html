@@ -1,0 +1,30 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Dictionary</title>
+		<style>	
+		tr{
+			padding: 10px;
+		}
+		</style>
+	</head>
+	<body>	
+		<main>
+			
+			{% set ns = di['HRA']+di['DA']+di['basic']%}
+			<p>Net Salary: {{ns}}</p>
+			{% for i in di %}
+			<table>
+			<tr>
+			<td>{{i}}</td>
+			<td>{{di[i]}}</td>
+			</tr>
+			</table>
+			{% endfor %}			
+		</main>
+		<footer>
+		</footer>	
+	</body>
+	<script>
+	</script>
+</html>

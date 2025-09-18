@@ -1,0 +1,58 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>For Looping</title>
+		<style>	
+			body{
+				
+			}
+		</style>
+	</head>
+	
+	<body>
+		<main>
+			<h1>For Loops</h1>
+			<details>
+				<summary>List Loop</summary>
+				<p>Given list: {{li}}</p>
+				<p>
+					{% for i in li %}
+					{{i}} 
+					{% endfor %}
+				</p>
+			</details>
+			<br>
+			<details>
+				<summary>Dictionary Loop</summary>
+				<p>Given dictionary: {{di}}</p>
+				<p> Values:
+					{% for i in di %}
+					{{di[i]}} 
+					{% endfor %}
+				</p>
+				<p> Keys: 
+					{% for i in di %}
+					{{i}} 
+					{% endfor %}
+				</p>
+				<p> Items: 
+					{% for i,j in di.items() %}
+					{{i,j}} 
+					{% endfor %}
+				</p>
+			</details>
+			<br>
+			<details>
+				<summary>Tuple Loop</summary>
+				<p>Given tuple: {{tup}}</p>
+				<p>
+					{% for i in tup %}
+					{{i}}
+					{% endfor %}
+				</p>
+			</details>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>

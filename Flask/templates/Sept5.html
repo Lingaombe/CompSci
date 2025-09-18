@@ -1,0 +1,33 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Dictionary</title>
+		<style>	
+		tr{
+			padding: 10px;
+		}
+		</style>
+	</head>
+	<body>	
+		<main>
+			
+			{% set x = di['basic'] %}
+
+			{% if di['grade'] == 'A' %}
+			{% set x = x*1.15 %}
+			
+			{% elif di['grade'] == 'B' %}
+			{% set x = x*1.1 %}
+			
+			{% elif di['grade'] == 'C' %}
+			{% set x = x*1.05 %}
+			{% endif %}
+			<p>{{x}}</p>
+
+			
+		</main>
+	
+	</body>
+	<script>
+	</script>
+</html>

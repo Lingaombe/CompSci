@@ -1,0 +1,34 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Vowels</title>
+		<style>	
+		tr{
+			padding: 10px;
+		}
+		</style>
+	</head>
+	<body>	
+		<main>
+			{% set ns = namespace(vc=0, cc=0) %}
+			<h1>Vowels and Consonants</h1>
+			{% for i in li %}
+				{% if i in liv %}
+					{% set ns.vc=ns.vc+1 %}
+				{% else %}
+					{% set ns.cc=ns.cc+1 %}
+				{% endif %}
+			{% endfor %}
+			<table>
+			<tr>Vowel</tr>
+			<tr>{{ns.vc}}</tr>
+			<tr>Consonants</tr>
+			<tr>{{ns.cc}}</tr>
+			</table>			
+		</main>
+		<footer>
+		</footer>	
+	</body>
+	<script>
+	</script>
+</html>
