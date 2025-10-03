@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Units</title>
+		<style>	
+			body{
+			
+			}
+		</style>
+	</head>
+	
+	<body>
+		<main>
+			<h1>Units Entries</h1>
+			
+			<form method="POST" action="/submitted">
+				<input placeholder="Customer number" name="roll" type="text" pattern="[0-9]+" required min="1"><BR>
+				<input placeholder="Customer name" name="sname" type="text" required pattern="[A-Z,a-z]+"><BR>
+				<input type="radio" name="gender" value="F">Female<BR>
+				<input type="radio" name="gender" value="M">Male<BR>
+				<input type="radio" name="gender" value="O">Other<BR>
+				<select name="class" required>
+					<option default value="">Select Bill Type</option> 
+					<option value="res">Residential</option>
+					<option value="com">Commercial</option>
+				</select><BR>
+				<input type="text" pattern="[a-z,A-Z,0-9/,.\]+" required placeholder="Enter Address" name="marks1"><BR>
+				<input type="number" pattern="[0-9]+" min="10000" required placeholder="Enter Meter no" name="marks2"><BR>
+				<input type="text" pattern="[0-9]+" min="1" max="100" required placeholder="Enter Previous Units" name="marks3"><br>
+				<input type="text" pattern="[0-9]+" min="1" max="100" required placeholder="Enter Current Units" name="marks4"><br>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>

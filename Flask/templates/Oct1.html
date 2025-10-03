@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Grading</title>
+		<style>	
+			body{
+			
+			}
+		</style>
+	</head>
+	
+	<body>
+		<main>
+			<h1>Grading Entries</h1>
+			
+			<form method="POST" action="/submitted">
+				<input placeholder="Roll number" name="roll" type="text" pattern="[0-9]+" required min="1"><BR>
+				<input placeholder="Student name" name="sname" type="text" required pattern="[A-Z,a-z]+"><BR>
+				<input type="radio" name="gender" value="F">Female<BR>
+				<input type="radio" name="gender" value="M">Male<BR>
+				<input type="radio" name="gender" value="O">Other<BR>
+				<select name="class" required>
+					<option default value="">Select</option> 
+					<option value="I">B.Sc.I</option>
+					<option value="II">B.Sc.II</option>
+					<option value="III">B.Sc.III</option>
+				</select><BR>
+				<input type="text" pattern="[0-9]+" required placeholder="Enter marks1" name="marks1"><BR>
+				<input type="text" pattern="[0-9]+" min="1" max="100" required placeholder="Enter marks2" name="marks2"><BR>
+				<input type="text" pattern="[0-9]+" min="1" max="100" required placeholder="Enter marks3" name="marks3"><br>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>
