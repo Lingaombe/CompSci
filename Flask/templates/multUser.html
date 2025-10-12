@@ -13,26 +13,12 @@
         }
 </style>
 <body>
-    <table>
-        <caption>Student data</caption>
-        <thead>
-            <th>Name</th>
-            <th>Marks</th>
-        </thead>
-        <tbody>
-        {% for student in stock %}
-            <tr>
-                <td> {{student.name}} </td>
-                <td> {{student.marks}} </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% for item, qty in stock.items() %}
+    {% if qty > 0 %}
+        <p>{{item}} is in stock</p>
+    {% else %}
+        <p>{{item}} is out of stock</p>
+    {% endif %}
+    {% endfor %}
 </body>
 </html>
-
-Pass a dictionary of items and their stock quantity, e.g.: 
-stock = {"Shirt": 20, "Shoes": 0, "Hat": 15} 
-In the template, loop through the dictionary and display: 
-• “Shirt is in stock” if quantity > 0 
-• “Shoes is out of stock” if quantity = 0 

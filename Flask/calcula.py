@@ -1,7 +1,5 @@
 from flask import *
-
 app = Flask(__name__)
-
 @app.route('/calc/<int:x>/<int:y>/<op>')
 def calc(x,y,op):
   if op == "add":
@@ -14,8 +12,6 @@ def calc(x,y,op):
     res = x/y
   else:
     return f'<p>Choose operation add, sub, mul or div</p>'
-    
-  return f'<p>The result after {op} is {res}</p>'
-  
+  return f'<p>{res}</p>'
 if __name__ == '__main__':
   app.run(debug=True)
