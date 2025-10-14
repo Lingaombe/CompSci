@@ -1,0 +1,48 @@
+x="abc", y=[10,2,3,4], z="this is morning", a=-10
+
+<!DOCTYPE html>
+<html>
+	<head><title>Filters in Flask</title></head>
+	<style>
+		body{
+			background : pink;
+			color: green;
+		}
+		p{
+			animation: colors 1s infinite;
+		}
+		@keyframes colors{
+			0%{ color: green; font-size: 1rem;}
+			20%{ color: green; font-size: 1.5rem;}
+			40%{ color: red; font-size: 2rem;}
+			60%{ color: red; font-size: 2.5rem;}
+			80%{ color: orange; font-size: 3rem;}
+			90%{ color: green; font-size: 2rem;}
+			100%{ color: green; font-size: 1rem;}
+		}
+	</style>
+	<body>
+		<p>
+			"{{x}}" in uppercase '{{ x|upper }}' and capitalized '{{ x|capitalize }}'<br>
+			"{{ x|upper }}" in lowercase '{{ x|lower }}'<br>
+			"{{x}}" as a list is {{ x|list }}<br>
+			"{{x}}" randomly picked element {{ x|random }}<br>
+			{{y}} randomly picked element {{ y|random }}<br>
+			{{y}} first and last element "{{ y|first }}" "{{ y|last }}" <br>
+			{{y}} sorted is {{ y|sort }} <br>
+			{{a}} absolute value to float {{ a|abs|float }} <br>
+			"{{z}}" word count {{ z|wordcount }} <br>
+			"{{z}}" character count using length: {{ z|length }} and count: {{ z|count }} <br>
+			"{{z}}" in reverse "{{ z|reverse }}" <br>
+			"Racecar" in reverse "{{ "Racecar"|reverse }}" <br>
+			"{{z}}" capitalize "{{ z|capitalize }}" and each word capitalized {{ z|title }}<br>
+			"{{z}}" replace morning "{{ z|replace("morning","evening") }}"<br>
+			{{a}} is a number? {{ a is number }}<br>
+			{{a}} is a string? {{ a is string }}<br>
+			"{{x}}" is a string? {{ x is string }}<br>
+			"{{x}}" is a number? {{ x is number }}<br>
+			"{{z}}" is a string? {{ z is string }}<br>
+			{{y}} joined with ^_^ {{ y|join("^_^") }} after sorting {{ y|sort|join("^_^") }} <br>
+		</p>
+	</body>
+</html>
