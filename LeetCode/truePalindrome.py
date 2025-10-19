@@ -4,4 +4,3 @@ class Solution(object):
         s = [i for i in s if i.isalpha() == True]
         s = " ".join(s)
         return s == s[::-1]
-        s = "race a car"
