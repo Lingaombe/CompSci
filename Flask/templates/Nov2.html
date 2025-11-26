@@ -1,0 +1,34 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Patient Data</title>
+	</head>
+	
+	<body>
+		<main>
+			<h1>Patient Data</h1>
+			
+			<form method="POST" action="/info">
+				<input placeholder="Patient ID" name="code" type="text" pattern="[a-zA-Z0-9]+" required><BR>
+				<input placeholder="Patient name" name="name" type="text" required pattern="[A-Za-z]+"><BR>
+				<input placeholder="Patient Address" name="add" type="text" pattern="[a-zA-Z0-9]+" required><BR>
+				<input placeholder="Patient Tel" name="pt" type="tel" pattern="[0-9]+" required><BR>
+				<input type="text" pattern="[a-zA-Z]+" required placeholder="Enter Reference Doctor Name" name="dn"><BR>
+				<input type="text" pattern="[0-9]+" required placeholder="Enter Doctor Tel" name="reo"><BR>
+				<label>Select Test</label>
+				<select name="cat" required>
+					<option default value="">Select</option> 
+					<option value="FBC">FBC</option>
+					<option value="MRDT">MRDT</option>
+					<option value="Hepatitis">Hepatitis</option>
+					<option value="CD4 Count">CD4 Count</option>
+				</select><BR>
+				<label>Select Date Blood Recieved</label>
+				<input type="date" required name="expd"><BR>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>

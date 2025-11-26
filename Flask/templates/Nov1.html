@@ -1,0 +1,32 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Items</title>
+	</head>
+	
+	<body>
+		<main>
+			<h1>Items Data</h1>
+			
+			<form method="POST" action="/info">
+				<input placeholder="Item code" name="code" type="text" pattern="[a-zA-Z0-9]+" required><BR>
+				<input placeholder="Item name" name="name" type="text" required pattern="[A-Z,a-z]+"><BR>
+				<label>Select category</label>
+				<select name="cat" required>
+					<option default value="">Select</option> 
+					<option value="metallic">Metallic</option>
+					<option value="Wooden">Wooden</option>
+					<option value="Plastic">Plastic</option>
+				</select><BR>
+				<label>Select Expiry Date</label>
+				<input type="date" required placeholder="Expiry Date" name="expd"><BR>
+				<input type="text" pattern="[0-9]+" required placeholder="Enter Item Rate" name="rate"><BR>
+				<input type="text" pattern="[0-9]+" required placeholder="Enter Reorder Level" name="reo"><BR>
+				<textarea type="text" rows="3" cols="100" required placeholder="Enter Item Description" name="desc"></textarea><br>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>
