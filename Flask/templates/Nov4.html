@@ -1,0 +1,27 @@
+<table>
+	<caption>Emp Dets</caption>
+	<thead>
+		<th>empID</th>
+		<th>empName</th>
+		<th>dept</th>
+		<th>category</th>
+		<th>basic Salary</th>
+	</thead>
+	<tbody>
+	{% for el in li %}
+		<tr>
+			<td>{{el[0]}}</td>
+			<td>{{el[1]}}</td>
+			<td>{{el[2]}}</td>
+			<td>{{el[3]}}</td>
+			<td>{{el[4]}}</td>
+		<tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+<style>
+th,td{
+	border: 1px solid black;
+}
+</style>

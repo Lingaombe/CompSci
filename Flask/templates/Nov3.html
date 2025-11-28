@@ -1,0 +1,41 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Student Information</title>
+		<style>	
+			table{
+			border: 1px solid black;
+			margin: auto;
+			text-align: center;
+		}
+		th, td{
+			border: 1px solid black;
+			width: 200px;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<main>
+			<table>
+				<caption>Student Information</caption>
+				<thead>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+				</thead>
+				<tbody>
+				{% for el in d %}
+					<tr>
+						<td>{{el[0]}}</td>
+						<td>{{el[1]}}</td>
+						<td>{{el[2]}}</td>	
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</main>
+	</body>
+	<script>
+	</script>
+</html>
