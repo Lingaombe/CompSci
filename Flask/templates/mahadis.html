@@ -1,0 +1,87 @@
+<!-- 
+2. create a web app form as follows
+consumer type dropdown residential, commercial
+consumer number integer
+select type radio button individual, company, organisation
+first middle last names
+uid
+gender dropdown MF Other
+Marital status dd married unmarried
+DOB date component
+-->
+
+{% extends 'poyambira.html' %}
+
+{% block content %}
+<form class="form" align="center" action="/add" method="POST">
+	<div class="form-select">
+    <label>Consumer Type</label>
+		<select class="form-select" name="ct">
+			<option value="residential">Residential</option>
+			<option value="commercial">Commercial</option>
+		</select>
+  </div><br>
+  
+	<div class="form-group">
+    <label>Consumer Number</label>
+		<input class="form-control" name="cn" type="text" pattern="[0-9]+" required title="only numbers allowed">
+  </div><br>
+  
+  <label>Select Type</label>
+  <div class="form-check">
+		<input class="form-check-input" value="individual" name="st" type="radio" pattern="[0-9]+" required>Individual
+  </div>
+  <div class="form-check">
+		<input class="form-check-input" value="company" name="st" type="radio" pattern="[0-9]+" required>Company
+  </div>
+  <div class="form-check">
+		<input class="form-check-input" value="organisation" name="st" type="radio" pattern="[0-9]+" required>Organisation
+  </div>
+  
+  <div class="form-group">
+    <label>First Name</label>
+		<input class="form-control" name="fn" type="text" pattern="[a-zA-Z ]+" required title="only alphabets allowed">
+  </div><br>
+  
+  <div class="form-group">
+    <label>Middle Name</label>
+		<input class="form-control" name="mn" type="text" pattern="[a-zA-Z ]+" required title="only alphabets allowed">
+  </div><br>
+  
+  <div class="form-group">
+    <label>Last Name</label>
+		<input class="form-control" name="ln" type="text" pattern="[a-zA-Z ]+" required title="only alphabets allowed">
+  </div><br>
+  
+  <div class="form-group">
+    <label>UID</label>
+		<input class="form-control" name="uid" type="text" pattern="[0-9]+" required title="only numbers allowed">
+  </div><br>
+  
+  <div class="form-select">
+    <label>Gender</label>
+		<select class="form-select" name="ge">
+			<option value="female">Female</option>
+			<option value="male">Male</option>
+			<option value="other">Other</option>
+		</select>
+  </div><br>
+  
+  <div class="form-select">
+    <label>Marital Status</label>
+		<select class="form-select" name="ms">
+			<option value="married">Married</option>
+			<option value="unmarried">Unmarried</option>
+		</select>
+  </div><br>
+  
+  
+  <div class="form-group">
+    <label>Date Of Birth</label>
+		<input class="form-control" name="dob" type="date" required>
+  </div><br>
+  
+	<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}
+
