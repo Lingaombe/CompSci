@@ -1,0 +1,35 @@
+{% extends 'poyambira.html' %}
+
+{% block content %}
+<form class="form" action="/" method="POST">
+<h1>Book Issue System</h1>
+
+Student: <select name="student">
+<option value="" default>----select----</option>
+{% for s in student %}
+<option value="{{s[0]}}">{{s[1]}} {{s[2]}}</option>
+{% endfor %}
+</select><br><br>
+
+Book: <select name="book">
+<option value="" default>----select----</option>
+{% for b in book %}
+<option value="{{b[0]}}">{{b[1]}} by {{b[2]}}</option>
+{% endfor %}
+</select><br><br>
+
+Issue Date:
+<input name="idate" type="date"><br><br>
+
+Return Date:
+<input name="rdate" type="date"><br><br>
+
+<button class="btn btn-primary type="submit">Submit</button>
+</form>
+
+{% if fine is not none %}
+<hr>
+<p><strong>Total Days:</strong> {{ d }}</p>
+<p><strong>Fine:</strong> ₹ {{ "%.2f"|format(fine) }}</p>
+{% endif %}
+{% endblock %}
