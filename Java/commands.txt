@@ -1,0 +1,3 @@
+sudo javac -cp /opt/tomcat/lib/servlet-api.jar -d . first.java
+
+sudo systemctl restart tomcat^C
